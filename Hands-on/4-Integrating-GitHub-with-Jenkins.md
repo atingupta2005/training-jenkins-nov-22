@@ -14,7 +14,7 @@
       ```
       docker exec -it -u root jenkins bash
       ```
-  - Install maven
+  - Install maven (If required)
     ```
     apt install maven
     mvn -v
