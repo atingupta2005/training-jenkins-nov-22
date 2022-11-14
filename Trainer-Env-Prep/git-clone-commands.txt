@@ -1,0 +1,9 @@
+rm -rf Training-Advanced-Devops-AWS-Terraform-Jenkins/
+git clone https://gitlab.com/atin-trainings/Training-Advanced-Devops-AWS-Terraform-Jenkins.git
+cd Training-Advanced-Devops-AWS-Terraform-Jenkins/
+git checkout am1
+ls
+source ~/venv/bin/activate
+find . -name  '*.md' -type f -exec sh -c  "notedown '{}' >  '{}.ipynb'" \;
+find . -name  '*.md' -type f -exec sh -c  "rm '{}'" \;
+jupyter notebook --ip 0.0.0.0 --port 8800 --MultiKernelManager.default_kernel_name=bash
