@@ -10,7 +10,6 @@ sudo apt -y install openssl tree
 
 ## Setup multiple users in Ubuntu
 - For each participant, we need to setup login accounts
-sudo groupadd docker
 ```
 sudo groupadd docker
 for ((i=1;i<=20;i++)); do
