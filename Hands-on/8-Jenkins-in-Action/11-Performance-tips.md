@@ -1,0 +1,26 @@
+# Performance Tips
+## Addressing Slow Performance in Jenkins
+-   Avoid Complex Groovy Script In Your Pipelines
+    - Reduce the number as well as the complexity of Groovy scripts in your pipelines and instead favor plugins that can be run on each agent directly
+-   Keep Builds Minimal at the Master Node
+    - The number of builds on the master node significantly affects resource usage
+-   Don’t Bloat the Jenkins Master Installation
+    - DevOps professionals often work across multiple teams and projects for CI/CD-related tasks.
+    - If that’s your situation, take care not to burden a single Jenkins master
+    - Instead, create multiple masters
+-   Make Agent Management Effortless
+    - While setting up Jenkins, it’s important to set up the agents correctly
+    - You want to make sure that when the time comes, you can add new agents or replace existing ones easily
+    - To achieve this, consider creating a virtual machine image for the agent
+    - You might also consider running Jenkins inside a Docker container in a scalable cluster like Kubernetes or Amazon EKS where scaling agents is simple
+-   Remove Older Builds
+    - After a while, Jenkins builds can pile up, and disk consumption may get out of hand.
+    - Developers often overlook Jenkins’ Discard Old Builds option
+    - Set metrics, such as the number of builds and days to keep builds
+-   Avoid Plugin Overload
+    - In order to determine if a plugin is causing your builds to slow down, you can try running your builds with all or some plugins disabled
+    - Gradually add each back to determine which is causing the bottleneck.
+-   Tracking Jenkins Performance
+    - https://plugins.jenkins.io/monitoring/
+        - Open URL: http://localhost:8080/monitoring
+-
